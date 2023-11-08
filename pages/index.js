@@ -18,13 +18,13 @@ export default function Home() {
       </Head>
       <div className="flex min-h-screen w-full items-center justify-center bg-[url('/images/bg-4.jpg')] bg-cover text-center text-white">
         <div className="text-black">
-          <div className="m-auto mb-4 mt-12 w-64 rounded-sm bg-blue-600 p-4 shadow-md shadow-black/50">
+          <div className="m-auto mt-24 w-48 rounded-sm bg-blue-600 p-4 shadow-md shadow-black/50">
             <FontAwesomeIcon
               icon={faRobot}
               className="text-6xl text-yellow-300"
             />
           </div>
-          <h1 className="p-4 font-indie text-4xl font-bold">
+          <h1 className="p-4 font-indie text-3xl font-bold">
             Welcome to chat GPT Clone(with Dejong1706)
           </h1>
           <p className="mt-2 font-indie text-2xl ">
