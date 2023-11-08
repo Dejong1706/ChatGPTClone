@@ -1,34 +1,11 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Result : https://chat-gpt-clone-green-eta.vercel.app/
+Login & Sign in page
+![New chat - Chrome 2023-11-09 오전 3_14_56](https://github.com/Dejong1706/ChatGPTClone/assets/75114974/2973b9a0-1748-45b0-9e42-969d751ef54d)
+Login page
+![New chat - Chrome 2023-11-09 오전 3_15_05](https://github.com/Dejong1706/ChatGPTClone/assets/75114974/83436bd6-a29b-4c7b-8121-a042dd453cdc)
+new Chat Page
+![New chat - Chrome 2023-11-09 오전 3_24_13](https://github.com/Dejong1706/ChatGPTClone/assets/75114974/a1350e31-5fee-4074-ae47-9e3cc3e3b43c)
+individual pages
+![New chat - Chrome 2023-11-09 오전 3_23_42](https://github.com/Dejong1706/ChatGPTClone/assets/75114974/bedd9f60-c7f9-4e17-9e0a-9dc346256df4)
+Error
+![New chat - Chrome 2023-11-09 오전 3_24_03](https://github.com/Dejong1706/ChatGPTClone/assets/75114974/299a4721-02de-477d-9f7b-9b44d824805d)
