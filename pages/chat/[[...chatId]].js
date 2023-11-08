@@ -16,7 +16,6 @@ import { useEffect, useState } from "react";
 import { v4 as uuid } from "uuid";
 
 export default function ChatPage({ chatId, title, messages = [] }) {
-  console.log("props: ", title, messages);
   const [newChatId, setNewChatId] = useState(null);
   const [incomingMessage, setIncomingMessage] = useState("");
   const [messageText, setMessageText] = useState("");
@@ -24,6 +23,7 @@ export default function ChatPage({ chatId, title, messages = [] }) {
   const [generatingResponse, setGeneratingResponse] = useState(false);
   const [fullMessage, setFullMessage] = useState("");
   const [originalChatId, setOriginalChatId] = useState(chatId);
+  const [delayBounce, setDelayBounce] = useState("");
   const router = useRouter();
 
   const routeHasChanged = chatId !== originalChatId;
@@ -32,6 +32,9 @@ export default function ChatPage({ chatId, title, messages = [] }) {
   useEffect(() => {
     setNewChatMessages([]);
     setNewChatId(null);
+    setTimeout(function () {
+      setDelayBounce("fa-bounce");
+    }, 700);
   }, [chatId]);
 
   // save the newly streamed message to new chat messages
@@ -74,7 +77,6 @@ export default function ChatPage({ chatId, title, messages = [] }) {
     });
     setMessageText("");
 
-    //console.log("NEW CHAT: ", json);
     const response = await fetch(`/api/chat/sendMessage`, {
       method: "POST",
       headers: {
@@ -90,7 +92,6 @@ export default function ChatPage({ chatId, title, messages = [] }) {
     const reader = data.getReader();
     let content = "";
     await streamReader(reader, (message) => {
-      console.log("MESSAGE: ", message);
       if (message.event === "newChatId") {
         setNewChatId(message.content);
       } else {
@@ -106,7 +107,7 @@ export default function ChatPage({ chatId, title, messages = [] }) {
 
   const allMessages = [...messages, ...newChatMessages];
 
-  return (
+  출처: https: return (
     <>
       <Head>
         <title>New chat</title>
@@ -125,7 +126,7 @@ export default function ChatPage({ chatId, title, messages = [] }) {
                     />
                     <FontAwesomeIcon
                       icon={faFaceGrinSquint}
-                      className="fa-bounce text-6xl text-yellow-200"
+                      className={`${delayBounce} text-6xl text-yellow-200`}
                     />
                     <FontAwesomeIcon
                       icon={faFaceLaughBeam}

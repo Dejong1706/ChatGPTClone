@@ -5,7 +5,6 @@ export const config = {
 };
 
 export default async function handler(req) {
-  console.log("IN HERE!");
   try {
     const { chatId: chatIdFromParam, message } = await req.json();
 
@@ -22,7 +21,6 @@ export default async function handler(req) {
     }
 
     let chatId = chatIdFromParam;
-    console.log("MESSAGE: ", message);
     const initialChatMessage = {
       role: "system",
       content:
@@ -85,8 +83,6 @@ export default async function handler(req) {
     }
 
     messagesToInclude.reverse();
-
-    console.log(messagesToInclude);
 
     const stream = await OpenAIEdgeStream(
       "https://api.openai.com/v1/chat/completions",

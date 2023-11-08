@@ -12,6 +12,8 @@ module.exports = {
     extend: {
       fontFamily: {
         body: "var(--font-outfit), sans-serif",
+        shadows: ["Shadows Into Light Two"],
+        indie: ["Indie Flower"],
       },
     },
   },
