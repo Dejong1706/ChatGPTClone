@@ -4,7 +4,7 @@ ChatGPT Clone coding made using NextJS13 and MongoDB, OpenAI, and Tailwindcsss.
 
 <h3>Login & Sign in page</h3>
 
-![New chat - Chrome 2023-11-09 오전 3_14_56](https://github.com/Dejong1706/ChatGPTClone/assets/75114974/2973b9a0-1748-45b0-9e42-969d751ef54d)
+![Chatty Pete - Login or Signup - Chrome 2023-11-09 오전 5_43_50](https://github.com/Dejong1706/ChatGPTClone/assets/75114974/baca3453-5cce-41ca-9c66-eb08728b4ca3)
 
 <h3>Login page</h3>
 
