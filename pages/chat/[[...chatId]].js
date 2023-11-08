@@ -1,5 +1,9 @@
 import { getSession } from "@auth0/nextjs-auth0";
-import { faRobot } from "@fortawesome/free-solid-svg-icons";
+import {
+  faFaceGrinSquint,
+  faFaceKissBeam,
+  faFaceLaughBeam,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { ChatSidebar } from "components/ChatSidebar";
 import { Message } from "components/Message";
@@ -109,16 +113,27 @@ export default function ChatPage({ chatId, title, messages = [] }) {
       </Head>
       <div className="grid h-screen grid-cols-[260px_1fr]">
         <ChatSidebar chatId={chatId} />
-        <div className="flex flex-col overflow-hidden bg-gray-700">
-          <div className="flex flex-1 flex-col-reverse overflow-scroll text-white">
+        <div className="flex flex-col overflow-hidden">
+          <div className="flex flex-1 flex-col-reverse overflow-scroll text-white scrollbar-hide">
             {!allMessages.length && !incomingMessage && (
               <div className="m-auto flex items-center justify-center text-center">
-                <div>
-                  <FontAwesomeIcon
-                    icon={faRobot}
-                    className="text-6xl text-emerald-200"
-                  />
-                  <h1 className="mt-2 text-4xl font-bold text-white/50">
+                <div className="flex flex-col items-center justify-center">
+                  <div className="flex gap-6">
+                    <FontAwesomeIcon
+                      icon={faFaceKissBeam}
+                      className="fa-bounce text-6xl text-red-200"
+                    />
+                    <FontAwesomeIcon
+                      icon={faFaceGrinSquint}
+                      className="fa-bounce text-6xl text-yellow-200"
+                    />
+                    <FontAwesomeIcon
+                      icon={faFaceLaughBeam}
+                      className="fa-bounce text-6xl text-emerald-200"
+                    />
+                  </div>
+
+                  <h1 className="mt-2 text-4xl font-bold text-black/50">
                     Ask me a question!
                   </h1>
                 </div>
@@ -145,14 +160,14 @@ export default function ChatPage({ chatId, title, messages = [] }) {
               </div>
             )}
           </div>
-          <footer className="bg-gray-800 p-10">
+          <footer className="bg-[#f1da00] p-10">
             <form onSubmit={handleSubmit}>
               <fieldset className="flex gap-2" disabled={generatingResponse}>
                 <textarea
                   value={messageText}
                   onChange={(e) => setMessageText(e.target.value)}
                   placeholder={generatingResponse ? "" : "Send a message..."}
-                  className="w-full resize-none rounded-md bg-gray-700 p-2 text-white focus:border-emerald-500 focus:bg-gray-600 focus:outline focus:outline-emerald-500"
+                  className="w-full resize-none rounded-md p-2 text-black focus:border-blue-200 focus:outline focus:outline-emerald-200"
                 />
                 <button type="submit" className="btn">
                   Send

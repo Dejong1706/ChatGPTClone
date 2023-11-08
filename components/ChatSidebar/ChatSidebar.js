@@ -20,25 +20,26 @@ export const ChatSidebar = ({ chatId }) => {
     };
     loadChatList();
   }, [chatId]);
+
   return (
-    <div className="overflex-hidden flex flex-col bg-gray-900 text-white">
+    <div className="overflex-hidden flex flex-col bg-blue-600">
       <Link
         href="/chat"
-        className="side-menu-item bg-emerald-500 hover:bg-emerald-600"
+        className="side-menu-item bg-[#f1da00] font-bold text-gray-700 hover:bg-[#d8c405]"
       >
         <FontAwesomeIcon icon={faPlus} />
         New Chat
       </Link>
-      <div className="flex-1 overflow-auto bg-gray-950">
+      <div className="flex-1 overflow-auto bg-blue-500 text-white">
         {chatList.map((chat) => (
           <Link
             key={chat._id}
             href={`/chat/${chat._id}`}
-            className={`side-menu-item ${
-              chatId === chat._id ? "bg-gray-700 hover:bg-gray-700" : ""
+            className={`m-2 flex items-center gap-4 rounded-md p-2 hover:bg-blue-600 ${
+              chatId === chat._id ? "bg-blue-600 hover:bg-blue-700" : ""
             }`}
           >
-            <FontAwesomeIcon icon={faMessage} className="text-white/50" />
+            <FontAwesomeIcon icon={faMessage} className="text-white" />
             <span
               title={chat.title}
               className="text-elipsis overflow-hidden whitespace-nowrap"
@@ -48,7 +49,10 @@ export const ChatSidebar = ({ chatId }) => {
           </Link>
         ))}
       </div>
-      <Link href="/api/auth/logout" className="side-menu-item">
+      <Link
+        href="/api/auth/logout"
+        className="side-menu-item bg-[#f1da00] font-bold text-gray-700 hover:bg-[#d8c405]"
+      >
         <FontAwesomeIcon icon={faRightFromBracket} />
         logout
       </Link>

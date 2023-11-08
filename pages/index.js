@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useUser } from "@auth0/nextjs-auth0/client";
 import { getSession } from "@auth0/nextjs-auth0";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faRobot } from "@fortawesome/free-solid-svg-icons";
+import { faFaceGrinSquint, faRobot } from "@fortawesome/free-solid-svg-icons";
 
 export default function Home() {
   const { isLoading, error, user } = useUser();
@@ -16,15 +16,15 @@ export default function Home() {
       <Head>
         <title>Chatty Pete - Login or Signup</title>
       </Head>
-      <div className="flex min-h-screen w-full items-center justify-center bg-gray-800 text-center text-white">
-        <div>
+      <div className="flex min-h-screen w-full items-center justify-center bg-[url('/images/bg-4.jpg')] bg-cover text-center text-white">
+        <div className="text-black">
           <div>
             <FontAwesomeIcon
-              icon={faRobot}
-              className="mb-2 text-6xl text-emerald-200"
+              icon={faFaceGrinSquint}
+              className="mb-2 text-6xl text-yellow-300"
             />
           </div>
-          <h1 className="text-4xl font-bold">
+          <h1 className="text-3xl font-bold">
             Welcome to chat GPT Clone(with Dejong1706)
           </h1>
           <p className="mt-2 text-lg">Log in with your account to continue</p>

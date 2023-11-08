@@ -11,9 +11,9 @@ export const Message = ({ role, content }) => {
     <div
       className={`grid grid-cols-[30px_1fr] gap-5 p-5 ${
         role === "assistant"
-          ? "bg-gray-600"
+          ? "bg-blue-200"
           : role === "notice"
-          ? "bg-red-600"
+          ? "bg-red-100"
           : ""
       }`}
     >
@@ -28,12 +28,12 @@ export const Message = ({ role, content }) => {
           />
         )}
         {role === "assistant" && (
-          <div className="flex h-[30px] w-[30px] items-center justify-center rounded-sm bg-gray-800 shadow-md shadow-black/50">
-            <FontAwesomeIcon icon={faRobot} className="text-emerald-200" />
+          <div className="flex h-[30px] w-[30px] items-center justify-center rounded-sm bg-blue-600 shadow-md shadow-black/50">
+            <FontAwesomeIcon icon={faRobot} className="text-yellow-300" />
           </div>
         )}
       </div>
-      <div className="prose prose-invert">
+      <div className="prose prose-invert text-gray-800">
         <ReactMarkdown>{content}</ReactMarkdown>
       </div>
     </div>
